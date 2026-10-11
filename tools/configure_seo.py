@@ -46,9 +46,9 @@ def configure(root=ROOT):
                'provider': {'@id': base + '#organization'},
                'hasOfferCatalog': {'@type': 'OfferCatalog', 'name': '웨딩 패키지', 'itemListElement': []}}
     descriptions = {
-        'BASIC': '웨딩케어(당일케어), 청첩장, 답례품, 축가(1인), 사회자',
-        'PREMIUM': '웨딩케어(당일케어), 청첩장, 답례품, 축가(3~4인), 사회자, 픽업서비스, 맞춤형 결혼식 진행 음원',
-        'VIP': '웨딩케어(당일케어), 청첩장·식권·답례품, 맞춤형 축가(4~6인), 맞춤형 오프닝곡, 사회자, 축의대, 픽업서비스, 맞춤형 결혼식 진행 음원'}
+        'BASIC': '웨딩케어(당일케어), 청첩장, 답례품, 축가(1인), 사회자, 혼주 한복',
+        'PREMIUM': '웨딩케어(당일케어), 청첩장, 답례품, 축가(3~4인), 사회자, 픽업서비스, 맞춤형 결혼식 진행 음원, 혼주 한복',
+        'VIP': '웨딩케어(당일케어), 청첩장·식권·답례품, 맞춤형 축가(4~6인), 맞춤형 오프닝곡, 사회자, 축의대, 픽업서비스, 맞춤형 결혼식 진행 음원, 혼주 한복'}
     for name, desc in descriptions.items():
         service['hasOfferCatalog']['itemListElement'].append({'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': name + ' 웨딩 패키지', 'description': desc}})
     graph = [org, service]
